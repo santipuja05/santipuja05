@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landing Page</title>
+    <style>
+        body {
+		padding-top : 200px;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+			background: url(intro-bg.jpg) no-repeat center center;
+			background-size: cover;
+			background-position: center; /* Posisikan gambar di tengah */
+            background-attachment: fixed; /* Membuat gambar latar belakang tetap saat menggulir */
+            
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Ini memungkinkan tombol untuk meluncur ke baris baru jika perlu */
+        }
+
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+            min-width: 150px; /* Lebar minimum tombol */
+        }
+
+        /* Tombol WhatsApp */
+        .whatsapp-button {
+            background-color: #2ab318; /* Warna hijau WhatsApp */
+            color: #fff;
+        }
+
+        /* Tombol Shopee */
+        .shopee-button {
+            background-color: #fe5722; /* Warna orange Shopee */
+            color: #fff;
+        }
+
+        /* Tombol Tokopedia */
+        .tokopedia-button {
+            background-color: #4f9d4e; /* Warna biru Tokopedia */
+            color: #fff;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+		h1{
+		margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+		color: #fff;
+		font-size: 3em;
+		}
+		p{
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+		color: #fff;
+		}
+        /* Responsif untuk mode mobile */
+        @media (max-width: 600px) {
+            .button-container {
+                flex-direction: column;
+                align-items: center; /* Pusatkan tombol pada mode mobile */
+            }
+        }
+
+        /* Frame untuk jumlah klik */
+        #clickCount {
+            border: 2px solid #fff;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selamat Datang!</h1>
+    <p>Silakan hubungi kami melalui salah satu platform berikut:</p>
+
+    <div class="button-container">
+        <!-- Tombol WhatsApp -->
+        <a href="https://wa.me/1234567890" class="button whatsapp-button" target="_blank" onclick="trackButtonClick('WhatsApp')">WhatsApp</a>
+
+        <!-- Tombol Shopee -->
+        <a href="https://shopee.co.id/namatoko" class="button shopee-button" target="_blank" onclick="trackButtonClick('Shopee')">Shopee</a>
+
+        <!-- Tombol Tokopedia -->
+        <a href="https://www.tokopedia.com/namatoko" class="button tokopedia-button" target="_blank" onclick="trackButtonClick('Tokopedia')">Tokopedia</a>
+    </div>
+
+    <p id="clickCount"></p>
+
+    <script>
+        let clickCount = localStorage.getItem('clickCount') || 0;
+
+        function trackButtonClick(buttonName) {
+            clickCount++;
+            localStorage.setItem('clickCount', clickCount);
+            document.getElementById('clickCount').textContent = 'Kunjungan: ' + clickCount;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('clickCount').textContent = 'Kunjungan: ' + clickCount;
+        });
+    </script>
+</body>
+</html>
