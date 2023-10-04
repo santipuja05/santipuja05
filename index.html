@@ -81,13 +81,6 @@
             }
         }
 
-        /* Frame untuk jumlah klik */
-        #clickCount {
-            border: 2px solid #fff;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -104,21 +97,5 @@
         <!-- Tombol Tokopedia -->
         <a href="https://www.tokopedia.com/namatoko" class="button tokopedia-button" target="_blank" onclick="trackButtonClick('Tokopedia')">Tokopedia</a>
     </div>
-
-    <p id="clickCount"></p>
-
-    <script>
-        let clickCount = localStorage.getItem('clickCount') || 0;
-
-        function trackButtonClick(buttonName) {
-            clickCount++;
-            localStorage.setItem('clickCount', clickCount);
-            document.getElementById('clickCount').textContent = 'Kunjungan: ' + clickCount;
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('clickCount').textContent = 'Kunjungan: ' + clickCount;
-        });
-    </script>
 </body>
 </html>
