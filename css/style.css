@@ -86,8 +86,6 @@
     bottom: 20px; /* Sesuaikan dengan jarak dari bawah */
     left: 50%;
     transform: translateX(-50%);
-    text-align: center;
-    width: 100%;
 }
         .button:hover {
             opacity: 0.8;
