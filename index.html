@@ -33,8 +33,8 @@
         .button {
             display: inline-block;
             margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 25px 35px;
+            font-size: 21px;
             text-align: center;
             text-decoration: none;
             border-radius: 5px;
@@ -67,7 +67,7 @@
 		margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
 		color: #fff;
-		font-size: 3em;
+		font-size: 75px;
 		}
 		p{
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
@@ -81,13 +81,6 @@
             }
         }
 
-        /* Frame untuk jumlah klik */
-        #clickCount {
-            border: 2px solid #fff;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
@@ -104,21 +97,5 @@
         <!-- Tombol Tokopedia -->
         <a href="https://www.tokopedia.com/namatoko" class="button tokopedia-button" target="_blank" onclick="trackButtonClick('Tokopedia')">Tokopedia</a>
     </div>
-
-    <p id="clickCount"></p>
-
-    <script>
-        let clickCount = localStorage.getItem('clickCount') || 0;
-
-        function trackButtonClick(buttonName) {
-            clickCount++;
-            localStorage.setItem('clickCount', clickCount);
-            document.getElementById('clickCount').textContent = 'Kunjungan: ' + clickCount;
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('clickCount').textContent = 'Kunjungan: ' + clickCount;
-        });
-    </script>
 </body>
 </html>
