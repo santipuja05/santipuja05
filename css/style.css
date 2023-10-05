@@ -76,11 +76,11 @@
 		color: #fff;
 }
 
-        /* Tombol Tokopedia */
-        .tokopedia-button {
-		background: linear-gradient(45deg, #25c34a, #4f9d4e); /* Efek gradient biru Tokopedia */
+        /* Tombol Lazada */
+        .lazada-button {
+		background: #0f156d;
 		color: #fff;
-}
+	}
 .bottom-link {
     position: fixed;
     bottom: 20px; /* Sesuaikan dengan jarak dari bawah */
