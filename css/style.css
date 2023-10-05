@@ -81,7 +81,14 @@
 		background: linear-gradient(45deg, #25c34a, #4f9d4e); /* Efek gradient biru Tokopedia */
 		color: #fff;
 }
-
+.bottom-link {
+    position: fixed;
+    bottom: 20px; /* Sesuaikan dengan jarak dari bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+}
         .button:hover {
             opacity: 0.8;
         }
