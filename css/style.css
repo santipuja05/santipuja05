@@ -105,7 +105,7 @@
 		font-size: 25px;
 		}
         /* Responsif untuk mode mobile */
-        @media (max-width: 750px) {
+        @media (max-width: 600px) {
             .button-container {
                 flex-direction: column;
                 align-items: center; /* Pusatkan tombol pada mode mobile */
